@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | Iqra SEO</title>
+  <meta name="description" content="Privacy Policy of Iqra SEO. Learn what information we collect when you contact us, how we use it and how to reach us about your data." />
+  <link rel="canonical" href="https://iqraseo.online/privacy-policy.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Policy | Iqra SEO" />
+  <meta property="og:description" content="What information Iqra SEO collects, how it is used and how to contact us about your data." />
+  <meta property="og:url" content="https://iqraseo.online/privacy-policy.html" />
+  <meta property="og:site_name" content="Iqra SEO" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d4ed8'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='26' font-weight='900' text-anchor='middle' fill='%23facc15'%3EIS%3C/text%3E%3C/svg%3E" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    body {
+      background: #f7faff;
+      color: #0a1a4a;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .hero-bg {
+      background:
+        radial-gradient(circle at top left, rgba(250, 204, 21, .45), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(37, 99, 235, .28), transparent 35%),
+        linear-gradient(135deg, #fffdf2 0%, #ffffff 45%, #eaf2ff 100%);
+    }
+
+    .blue-text { color: #1d4ed8; }
+    .gold-text { color: #f5b700; }
+    .deep-text { color: #0a1a4a; }
+
+    .main-btn {
+      background: linear-gradient(135deg, #fde047, #f5b700);
+      color: #0a1a4a;
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 14px 30px;
+      display: inline-block;
+      transition: .3s;
+      box-shadow: 0 16px 35px rgba(245, 183, 0, .35);
+    }
+    .main-btn:hover { transform: scale(1.05); }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #1d4ed8, #0a1a4a);
+      color: #facc15;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 16px;
+      margin-right: 10px;
+      box-shadow: 0 8px 20px rgba(29, 78, 216, .35);
+    }
+
+    .policy-box {
+      background: #fff;
+      border: 1px solid rgba(29, 78, 216, .14);
+      border-radius: 30px;
+      padding: 40px;
+      box-shadow: 0 18px 45px rgba(10, 26, 74, .10);
+    }
+
+    .policy-box h2 {
+      font-size: 24px;
+      font-weight: 900;
+      color: #0a1a4a;
+      margin: 36px 0 12px;
+      padding-left: 16px;
+      border-left: 5px solid #facc15;
+    }
+    .policy-box h2:first-of-type { margin-top: 0; }
+
+    .policy-box p {
+      color: #4b5563;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .policy-box ul { margin: 0 0 14px 0; }
+    .policy-box li {
+      color: #4b5563;
+      line-height: 1.8;
+      padding-left: 26px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+    .policy-box li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #1d4ed8;
+      font-weight: 900;
+    }
+
+    .policy-box a { color: #1d4ed8; font-weight: 700; }
+    .policy-box a:hover { text-decoration: underline; }
+
+    .floating-contact {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-options {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .floating-contact.open .contact-options { display: flex; }
+
+    .float-btn {
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .30);
+      transition: .3s;
+    }
+    .float-btn:hover { transform: scale(1.12); }
+    .insta-bg { background: linear-gradient(45deg, #f9ce34, #ee2a7b 55%, #6228d7); }
+
+    .mobile-menu { display: none; }
+    .mobile-menu.active { display: block; }
+
+    @media (max-width: 768px) {
+      .desktop-menu { display: none !important; }
+
+      .policy-box { padding: 26px 22px; }
+
+      .mobile-menu {
+        background: #ffffff;
+        padding: 18px 24px;
+        border-top: 1px solid rgba(29, 78, 216, .15);
+      }
+      .mobile-menu a {
+        display: block;
+        padding: 12px 0;
+        color: #0a1a4a;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(29, 78, 216, .08);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-200">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+    <a href="index.html" class="text-2xl font-black deep-text flex items-center">
+      <span class="logo-mark">IS</span>
+      IQRA<span class="gold-text">SEO</span>
+    </a>
+
+    <div class="desktop-menu hidden md:flex gap-6 font-bold text-xs uppercase items-center">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="services.html" class="hover:text-blue-600">Services</a>
+      <a href="blog.html" class="hover:text-blue-600">Blog</a>
+      <a href="privacy-policy.html" class="blue-text">Privacy Policy</a>
+      <a href="contact.html" class="main-btn text-sm px-5 py-2">Contact</a>
+    </div>
+
+    <button
+      class="mobile-menu-btn deep-text text-3xl font-bold md:hidden"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+  </div>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+</nav>
+
+<!-- ================= PAGE HERO ================= -->
+<header class="hero-bg py-20 md:py-24 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+
+    <span class="inline-block border border-blue-400/30 text-blue-700 bg-white/70 text-xs font-bold uppercase tracking-[4px] px-5 py-2 rounded-full mb-6">
+      Legal
+    </span>
+
+    <h1 class="text-4xl md:text-6xl font-black uppercase leading-tight mb-6 deep-text">
+      Privacy <span class="blue-text">Policy</span>
+    </h1>
+
+    <p class="text-[#33416b] text-lg md:text-xl leading-8 mb-4">
+      How Iqra SEO handles the information you share with us.
+    </p>
+
+    <p class="text-sm font-bold text-gray-500 mb-6">
+      Last updated: October 2026
+    </p>
+
+    <p class="text-sm font-bold text-gray-500">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <span class="mx-2 gold-text">/</span>
+      <span class="blue-text">Privacy Policy</span>
+    </p>
+  </div>
+</header>
+
+<!-- ================= POLICY ================= -->
+<section class="py-20 px-6">
+  <div class="max-w-4xl mx-auto policy-box">
+
+    <h2>1. Who We Are</h2>
+    <p>
+      Iqra SEO ("we", "us", "our") is a digital marketing agency based in Blue Area, Islamabad, Pakistan.
+      We run the website <a href="https://iqraseo.online/">iqraseo.online</a>. This policy explains what
+      information we collect, how we use it and the choices you have.
+    </p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We only collect information that you choose to give us when you contact us:</p>
+    <ul>
+      <li>Your name</li>
+      <li>Your email address or phone / WhatsApp number</li>
+      <li>Your website address</li>
+      <li>Details you share about your business and the service you need</li>
+    </ul>
+    <p>
+      The contact form on this website does not store your details on our website. When you press send,
+      your message opens in WhatsApp and is sent to us from your own WhatsApp account.
+    </p>
+
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>To reply to your enquiry</li>
+      <li>To prepare a plan or a quote for you</li>
+      <li>To deliver the services you order</li>
+      <li>To send you reports and updates about your project</li>
+    </ul>
+    <p>We do not sell or rent your personal information to anyone.</p>
+
+    <h2>4. Sharing Your Information</h2>
+    <p>
+      We do not share your personal information with third parties, except when it is needed to deliver
+      your project (for example, placing content on a publisher website) or when the law requires it.
+    </p>
+
+    <h2>5. Cookies And Third-Party Services</h2>
+    <p>
+      This website does not set its own tracking cookies. It does load some resources from third-party
+      services, which may collect technical data such as your IP address and browser type under their
+      own privacy policies:
+    </p>
+    <ul>
+      <li>Google Maps (the map on our Contact page)</li>
+      <li>Content delivery networks that load our fonts, icons and styles</li>
+      <li>WhatsApp, Instagram and email services, when you click a link to contact us</li>
+    </ul>
+    <p>
+      If we add analytics or advertising tools in the future, we will update this policy.
+    </p>
+
+    <h2>6. Links To Other Websites</h2>
+    <p>
+      Our website contains links to other websites, such as WhatsApp and Instagram. We are not
+      responsible for the privacy practices or content of those websites.
+    </p>
+
+    <h2>7. Data Security</h2>
+    <p>
+      We take reasonable steps to keep the information you share with us safe. However, no method of
+      sending information over the internet is completely secure, so we cannot guarantee absolute security.
+    </p>
+
+    <h2>8. How Long We Keep Your Information</h2>
+    <p>
+      We keep your information only as long as needed to reply to you, deliver your project and keep
+      basic business records.
+    </p>
+
+    <h2>9. Your Rights</h2>
+    <p>You can contact us at any time to:</p>
+    <ul>
+      <li>Ask what information we hold about you</li>
+      <li>Ask us to correct it</li>
+      <li>Ask us to delete it</li>
+    </ul>
+
+    <h2>10. Children's Privacy</h2>
+    <p>
+      Our services are meant for businesses and adults. We do not knowingly collect information
+      from children.
+    </p>
+
+    <h2>11. Changes To This Policy</h2>
+    <p>
+      We may update this policy from time to time. Any changes will be posted on this page with
+      a new "last updated" date.
+    </p>
+
+    <h2>12. Contact Us</h2>
+    <p>If you have any question about this policy, contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:iqraseo737@gmail.com">iqraseo737@gmail.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/923709909747" target="_blank" rel="noopener noreferrer">+92 370 9909747</a></li>
+      <li>Location: Blue Area, Islamabad, Pakistan</li>
+    </ul>
+
+    <div class="text-center mt-10">
+      <a href="contact.html" class="main-btn">Contact Us</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FLOATING TOGGLE ================= -->
+<div class="floating-contact" id="floatingContact">
+
+  <div class="contact-options">
+    <a href="https://wa.me/923709909747" target="_blank" rel="noopener noreferrer" class="float-btn bg-green-500" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <a href="https://www.instagram.com/iqra_abbasiseo" target="_blank" rel="noopener noreferrer" class="float-btn insta-bg" aria-label="Instagram">
+      <i class="fab fa-instagram text-2xl"></i>
+    </a>
+
+    <a href="mailto:iqraseo737@gmail.com" class="float-btn bg-blue-600" aria-label="Email">
+      <i class="fas fa-envelope text-2xl"></i>
+    </a>
+  </div>
+
+  <button
+    type="button"
+    id="floatToggle"
+    aria-label="Open contact options"
+    aria-expanded="false"
+    class="text-[#0a1a4a] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:rotate-12 transition"
+    style="background:#facc15;"
+  >
+    <i class="fas fa-comments text-3xl"></i>
+  </button>
+
+</div>
+
+<!-- ================= SIMPLE FOOTER ================= -->
+<footer class="py-10 px-6 text-white" style="background:#061033;border-top:3px solid #facc15;">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+
+    <a href="index.html" class="text-2xl font-black flex items-center">
+      <span class="logo-mark" style="background:linear-gradient(135deg,#fde047,#f5b700);color:#0a1a4a;">IS</span>
+      IQRA<span class="gold-text">SEO</span>
+    </a>
+
+    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-bold uppercase text-blue-100">
+      <a href="index.html" class="hover:text-yellow-300">Home</a>
+      <a href="about.html" class="hover:text-yellow-300">About</a>
+      <a href="services.html" class="hover:text-yellow-300">Services</a>
+      <a href="blog.html" class="hover:text-yellow-300">Blog</a>
+      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+      <a href="privacy-policy.html" class="hover:text-yellow-300">Privacy Policy</a>
+    </div>
+
+  </div>
+
+  <p class="text-center mt-8 pt-6 text-blue-200 text-sm border-t border-yellow-400/10 max-w-7xl mx-auto">
+    © 2026 Iqra SEO. All Rights Reserved.
+  </p>
+</footer>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('active');
+      const isOpen = mobileMenu.classList.contains('active');
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+  }
+
+  // Floating contact toggle
+  const floatBox = document.getElementById('floatingContact');
+  const floatToggle = document.getElementById('floatToggle');
+
+  if (floatBox && floatToggle) {
+    floatToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const open = floatBox.classList.toggle('open');
+      floatToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      floatToggle.innerHTML = open
+        ? '<i class="fas fa-xmark text-3xl"></i>'
+        : '<i class="fas fa-comments text-3xl"></i>';
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!floatBox.contains(e.target) && floatBox.classList.contains('open')) {
+        floatBox.classList.remove('open');
+        floatToggle.setAttribute('aria-expanded', 'false');
+        floatToggle.innerHTML = '<i class="fas fa-comments text-3xl"></i>';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

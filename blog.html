@@ -17,119 +17,232 @@
   <meta name="twitter:title" content="Blog | Iqra SEO" />
   <meta name="twitter:description" content="Simple, practical tips on SEO, backlinks, Google Ads, Meta Ads, websites and content writing." />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d4ed8'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='26' font-weight='900' text-anchor='middle' fill='%23facc15'%3EIS%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1437'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='26' font-weight='900' text-anchor='middle' fill='%23facc15'%3EIS%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
+    :root {
+      --navy: #0b1437;
+      --blue: #2563eb;
+      --gold: #f5b700;
+      --line: #e5eaf3;
+    }
+
     html { scroll-behavior: smooth; }
 
     body {
-      background: #f7faff;
-      color: #0a1a4a;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+      background: #ffffff;
+      color: #0f172a;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .hero-bg {
-      background:
-        radial-gradient(circle at top left, rgba(250, 204, 21, .45), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(37, 99, 235, .28), transparent 35%),
-        linear-gradient(135deg, #fffdf2 0%, #ffffff 45%, #eaf2ff 100%);
+    h1, h2, h3 { letter-spacing: -.02em; }
+
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 3px;
     }
 
-    .blue-text { color: #1d4ed8; }
-    .gold-text { color: #f5b700; }
-    .deep-text { color: #0a1a4a; }
+    /* ---------- Colour themes ---------- */
+    .t-seo     { --c1: #10b981; --c2: #059669; --soft: #ecfdf5; --sh: rgba(16, 185, 129, .55); }
+    .t-off     { --c1: #8b5cf6; --c2: #6d28d9; --soft: #f5f3ff; --sh: rgba(139, 92, 246, .55); }
+    .t-gads    { --c1: #f97316; --c2: #ef4444; --soft: #fff7ed; --sh: rgba(249, 115, 22, .55); }
+    .t-meta    { --c1: #3b82f6; --c2: #0866ff; --soft: #eff6ff; --sh: rgba(8, 102, 255, .5); }
+    .t-web     { --c1: #06b6d4; --c2: #0e7490; --soft: #ecfeff; --sh: rgba(6, 182, 212, .55); }
+    .t-content { --c1: #ec4899; --c2: #be185d; --soft: #fdf2f8; --sh: rgba(236, 72, 153, .55); }
 
-    .main-btn {
-      background: linear-gradient(135deg, #fde047, #f5b700);
-      color: #0a1a4a;
-      font-weight: 900;
-      border-radius: 999px;
-      padding: 14px 30px;
-      display: inline-block;
-      transition: .3s;
-      box-shadow: 0 16px 35px rgba(245, 183, 0, .35);
-    }
-    .main-btn:hover { transform: scale(1.05); }
-
-    .logo-mark {
-      width: 44px;
-      height: 44px;
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 26px;
       border-radius: 14px;
-      background: linear-gradient(135deg, #1d4ed8, #0a1a4a);
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1;
+      transition: transform .25s, box-shadow .25s, filter .25s;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+    .btn-sm { padding: 11px 20px; font-size: 14px; border-radius: 12px; }
+
+    .btn-wa    { background: linear-gradient(135deg, #25d366, #128c7e); color: #fff; box-shadow: 0 14px 28px -12px rgba(37, 211, 102, .8); }
+    .btn-gold  { background: linear-gradient(135deg, #fde047, #f5b700); color: #0b1437; box-shadow: 0 14px 28px -12px rgba(245, 183, 0, .8); }
+    .btn-light { background: #fff; color: #0b1437; box-shadow: 0 14px 28px -14px rgba(0, 0, 0, .5); }
+
+    /* ---------- Logo & nav ---------- */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--navy);
+      letter-spacing: -.02em;
+    }
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1e3a8a, #0b1437);
       color: #facc15;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
-      font-size: 16px;
-      margin-right: 10px;
-      box-shadow: 0 8px 20px rgba(29, 78, 216, .35);
+      font-weight: 800;
+      font-size: 15px;
+      box-shadow: 0 8px 18px -8px rgba(11, 20, 55, .7);
+    }
+    .accent { color: var(--blue); }
+
+    .nav-link { padding: 6px 0; transition: color .2s; }
+    .nav-link:hover, .nav-link.active { color: var(--blue); }
+
+    .mobile-menu { display: none; }
+    .mobile-menu.active { display: block; }
+
+    /* ---------- Page hero ---------- */
+    .hero {
+      background:
+        radial-gradient(900px 500px at 100% 0%, rgba(37, 99, 235, .10), transparent 60%),
+        radial-gradient(700px 420px at 0% 100%, rgba(245, 183, 0, .14), transparent 60%),
+        linear-gradient(180deg, #f6f9ff, #ffffff);
     }
 
-    .post-card {
-      background: #fff;
-      border: 1px solid rgba(29, 78, 216, .14);
-      border-radius: 26px;
-      overflow: hidden;
-      transition: .35s;
-      box-shadow: 0 18px 45px rgba(10, 26, 74, .10);
-    }
-    .post-card:hover {
-      border-color: #facc15;
-      box-shadow: 0 28px 70px rgba(29, 78, 216, .20);
-    }
-
-    .post-top {
-      height: 130px;
-      background: linear-gradient(135deg, #0a1a4a, #1d4ed8);
-      display: flex;
+    .badge {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      color: #facc15;
-      font-size: 46px;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: #1e40af;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+    }
+    .badge i { color: var(--blue); }
+
+    .grad-text {
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
+    .crumb { font-size: 14px; font-weight: 600; color: #64748b; }
+    .crumb a:hover { color: var(--blue); }
+    .crumb span.sep { margin: 0 8px; color: var(--gold); }
+    .crumb span.here { color: var(--blue); }
+
+    /* ---------- Post cards ---------- */
+    .post {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .post:hover {
+      border-color: var(--c1);
+      box-shadow: 0 26px 50px -26px var(--sh);
+    }
+    .post-top {
+      height: 120px;
+      background: linear-gradient(135deg, var(--c1), var(--c2));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 40px;
+    }
     .tag {
       display: inline-block;
-      background: #fff8d6;
-      color: #8a6500;
-      font-weight: 800;
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 6px 14px;
+      background: var(--soft);
+      color: var(--c2);
+      font-weight: 700;
+      font-size: 12px;
+      padding: 6px 12px;
       border-radius: 999px;
       margin-bottom: 14px;
     }
 
-    .post-card details summary {
+    .post details summary {
       cursor: pointer;
       list-style: none;
-      display: inline-block;
-      color: #1d4ed8;
-      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
       font-size: 14px;
-      border: 2px solid #1d4ed8;
-      border-radius: 999px;
-      padding: 9px 20px;
-      transition: .3s;
+      color: #fff;
+      background: linear-gradient(135deg, var(--c1), var(--c2));
+      box-shadow: 0 12px 22px -12px var(--sh);
+      transition: transform .25s, filter .25s;
     }
-    .post-card details summary::-webkit-details-marker { display: none; }
-    .post-card details summary:hover { background: #1d4ed8; color: #fff; }
-    .post-card details[open] summary { background: #1d4ed8; color: #fff; }
-    .post-card details .more { display: inline; }
-    .post-card details .less { display: none; }
-    .post-card details[open] .more { display: none; }
-    .post-card details[open] .less { display: inline; }
+    .post details summary::-webkit-details-marker { display: none; }
+    .post details summary:hover { transform: translateY(-2px); filter: brightness(1.06); }
+    .post details .less { display: none; }
+    .post details[open] .more { display: none; }
+    .post details[open] .less { display: inline; }
 
-    .post-body { margin-top: 18px; color: #4b5563; line-height: 1.75; font-size: 15px; }
+    .post-body {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: #475569;
+      line-height: 1.75;
+      font-size: 15px;
+    }
     .post-body p { margin-bottom: 12px; }
-    .post-body ul { margin: 0 0 12px 0; }
-    .post-body li { margin-bottom: 6px; }
+    .post-body ul { margin-bottom: 12px; }
+    .post-body li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .post-body li i { color: var(--c1); margin-top: 6px; flex-shrink: 0; }
+    .post-body strong { color: #0b1437; }
+
+    /* ---------- CTA ---------- */
+    .cta {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1d4ed8, #0b1437);
+      border-radius: 28px;
+      padding: 60px 28px;
+      text-align: center;
+      color: #fff;
+    }
+    .cta::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -90px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(250, 204, 21, .16);
+    }
+    .cta > * { position: relative; z-index: 1; }
+
+    /* ---------- Floating contact ---------- */
+    .soc-insta { background: linear-gradient(45deg, #f9ce34, #ee2a7b 50%, #6228d7); }
+    .soc-wa    { background: linear-gradient(135deg, #25d366, #128c7e); }
+    .soc-mail  { background: linear-gradient(135deg, #f43f5e, #ea4335); }
 
     .floating-contact {
       position: fixed;
@@ -147,41 +260,66 @@
       margin-bottom: 12px;
     }
     .floating-contact.open .contact-options { display: flex; }
-
     .float-btn {
-      width: 54px;
-      height: 54px;
-      border-radius: 999px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, .30);
-      transition: .3s;
+      color: #fff;
+      font-size: 22px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .28);
+      transition: transform .25s;
     }
-    .float-btn:hover { transform: scale(1.12); }
-    .insta-bg { background: linear-gradient(45deg, #f9ce34, #ee2a7b 55%, #6228d7); }
+    .float-btn:hover { transform: scale(1.1); }
+    .float-toggle {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      border: 0;
+      cursor: pointer;
+      color: #0b1437;
+      font-size: 26px;
+      background: linear-gradient(135deg, #fde047, #f5b700);
+      box-shadow: 0 16px 34px -8px rgba(245, 183, 0, .8);
+      transition: transform .25s;
+    }
+    .float-toggle:hover { transform: scale(1.07); }
 
-    .mobile-menu { display: none; }
-    .mobile-menu.active { display: block; }
+    /* ---------- Copyright bar ---------- */
+    .copy-bar {
+      background: #070d26;
+      border-top: 3px solid #facc15;
+      color: #94a3b8;
+      text-align: center;
+      font-size: 14px;
+      padding: 18px 20px;
+    }
 
     @media (max-width: 768px) {
       .desktop-menu { display: none !important; }
 
       .mobile-menu {
         background: #ffffff;
-        padding: 18px 24px;
-        border-top: 1px solid rgba(29, 78, 216, .15);
+        padding: 10px 20px 18px;
+        border-top: 1px solid var(--line);
       }
       .mobile-menu a {
         display: block;
-        padding: 12px 0;
-        color: #0a1a4a;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 13px;
-        border-bottom: 1px solid rgba(29, 78, 216, .08);
+        padding: 13px 0;
+        color: #0b1437;
+        font-weight: 600;
+        font-size: 15px;
+        border-bottom: 1px solid var(--line);
       }
+
+      .btn { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
     }
   </style>
 </head>
@@ -189,25 +327,25 @@
 <body>
 
 <!-- ================= HEADER ================= -->
-<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-200">
-  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-5 py-3">
 
-    <a href="index.html" class="text-2xl font-black deep-text flex items-center">
+    <a href="index.html" class="logo">
       <span class="logo-mark">IS</span>
-      IQRA<span class="gold-text">SEO</span>
+      <span>Iqra<span class="accent">SEO</span></span>
     </a>
 
-    <div class="desktop-menu hidden md:flex gap-6 font-bold text-xs uppercase items-center">
-      <a href="index.html" class="hover:text-blue-600">Home</a>
-      <a href="about.html" class="hover:text-blue-600">About</a>
-      <a href="services.html" class="hover:text-blue-600">Services</a>
-      <a href="blog.html" class="blue-text">Blog</a>
-      <a href="privacy-policy.html" class="hover:text-blue-600">Privacy Policy</a>
-      <a href="contact.html" class="main-btn text-sm px-5 py-2">Contact</a>
+    <div class="desktop-menu hidden md:flex gap-7 items-center text-[15px] font-semibold text-slate-600">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+      <a href="contact.html" class="btn btn-gold btn-sm">Contact</a>
     </div>
 
     <button
-      class="mobile-menu-btn deep-text text-3xl font-bold md:hidden"
+      class="mobile-menu-btn md:hidden text-3xl font-bold text-[#0b1437] w-11 h-11"
       type="button"
       aria-label="Open navigation menu"
       aria-expanded="false"
@@ -227,47 +365,45 @@
 </nav>
 
 <!-- ================= PAGE HERO ================= -->
-<header class="hero-bg py-20 md:py-24 px-6">
-  <div class="max-w-4xl mx-auto text-center">
+<header class="hero px-5 py-16 md:py-24">
+  <div class="max-w-3xl mx-auto text-center">
 
-    <span class="inline-block border border-blue-400/30 text-blue-700 bg-white/70 text-xs font-bold uppercase tracking-[4px] px-5 py-2 rounded-full mb-6">
-      Our Blog
-    </span>
+    <span class="badge"><i class="fas fa-book-open"></i> Our blog</span>
 
-    <h1 class="text-4xl md:text-6xl font-black uppercase leading-tight mb-6 deep-text">
-      Tips To Grow Your
-      <span class="blue-text">Business Online</span>
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1] text-[#0b1437] mt-6 mb-6">
+      Tips to grow your
+      <span class="grad-text">business online</span>
     </h1>
 
-    <p class="text-[#33416b] text-lg md:text-xl leading-8 mb-8">
+    <p class="text-lg text-slate-600 leading-8 mb-8">
       Simple, practical guides on SEO, backlinks, ads, websites and content.
       Written in plain language for business owners.
     </p>
 
-    <p class="text-sm font-bold text-gray-500">
-      <a href="index.html" class="hover:text-blue-600">Home</a>
-      <span class="mx-2 gold-text">/</span>
-      <span class="blue-text">Blog</span>
+    <p class="crumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span class="here">Blog</span>
     </p>
   </div>
 </header>
 
 <!-- ================= POSTS ================= -->
-<section class="py-20 px-6 bg-white">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+<section class="px-5 py-20 bg-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-7 items-start">
 
     <!-- Post 1 -->
-    <article class="post-card">
+    <article class="post t-seo">
       <div class="post-top"><i class="fas fa-magnifying-glass"></i></div>
       <div class="p-7">
         <span class="tag">SEO</span>
-        <h2 class="text-xl font-black mb-3 deep-text">What Is SEO And Why Does Your Business Need It?</h2>
-        <p class="text-gray-600 mb-5">
+        <h2 class="text-xl font-extrabold text-[#0b1437] mb-3">What is SEO and why does your business need it?</h2>
+        <p class="text-slate-600 mb-5">
           SEO helps customers find your website on Google without paying for every click.
         </p>
 
         <details>
-          <summary><span class="more">Read Article</span><span class="less">Close</span></summary>
+          <summary><span class="more">Read article</span><span class="less">Close article</span></summary>
           <div class="post-body">
             <p>
               SEO stands for search engine optimization. It is the work of improving your website
@@ -275,9 +411,9 @@
             </p>
             <p>It has three main parts:</p>
             <ul>
-              <li>✔ <strong>On-page SEO:</strong> titles, headings, keywords and content on your pages.</li>
-              <li>✔ <strong>Technical SEO:</strong> speed, mobile friendliness and clean site structure.</li>
-              <li>✔ <strong>Off-page SEO:</strong> backlinks from other trusted websites.</li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>On-page SEO:</strong> titles, headings, keywords and content on your pages.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Technical SEO:</strong> speed, mobile friendliness and clean site structure.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Off-page SEO:</strong> backlinks from other trusted websites.</span></li>
             </ul>
             <p>
               Unlike ads, SEO traffic does not stop when you stop paying. It takes time to build,
@@ -289,28 +425,28 @@
     </article>
 
     <!-- Post 2 -->
-    <article class="post-card">
+    <article class="post t-off">
       <div class="post-top"><i class="fas fa-link"></i></div>
       <div class="p-7">
         <span class="tag">Off Page SEO</span>
-        <h2 class="text-xl font-black mb-3 deep-text">How To Judge The Quality Of A Backlink</h2>
-        <p class="text-gray-600 mb-5">
+        <h2 class="text-xl font-extrabold text-[#0b1437] mb-3">How to judge the quality of a backlink</h2>
+        <p class="text-slate-600 mb-5">
           Not every backlink helps. Some can even hurt your rankings. Here is what to check.
         </p>
 
         <details>
-          <summary><span class="more">Read Article</span><span class="less">Close</span></summary>
+          <summary><span class="more">Read article</span><span class="less">Close article</span></summary>
           <div class="post-body">
             <p>
               A backlink is a link from another website to yours. Google treats good links
               as a vote of trust. Before taking any link, check these points:
             </p>
             <ul>
-              <li>✔ <strong>Relevance:</strong> is the website about your niche or a related one?</li>
-              <li>✔ <strong>Real traffic:</strong> does the site get real visitors from Google?</li>
-              <li>✔ <strong>Content quality:</strong> are the articles useful and well written?</li>
-              <li>✔ <strong>Indexing:</strong> are the site's pages indexed on Google?</li>
-              <li>✔ <strong>Link profile:</strong> does it link out to spam or unrelated sites?</li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Relevance:</strong> is the website about your niche or a related one?</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Real traffic:</strong> does the site get real visitors from Google?</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Content quality:</strong> are the articles useful and well written?</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Indexing:</strong> are the site's pages indexed on Google?</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Link profile:</strong> does it link out to spam or unrelated sites?</span></li>
             </ul>
             <p>
               A few links from relevant sites with real traffic are worth more than hundreds
@@ -322,17 +458,17 @@
     </article>
 
     <!-- Post 3 -->
-    <article class="post-card">
+    <article class="post t-gads">
       <div class="post-top"><i class="fas fa-scale-balanced"></i></div>
       <div class="p-7">
         <span class="tag">Ads</span>
-        <h2 class="text-xl font-black mb-3 deep-text">Google Ads Or Meta Ads: Which One Is Right For You?</h2>
-        <p class="text-gray-600 mb-5">
+        <h2 class="text-xl font-extrabold text-[#0b1437] mb-3">Google Ads or Meta Ads: which one is right for you?</h2>
+        <p class="text-slate-600 mb-5">
           Both work, but for different goals. The right choice depends on how your customers buy.
         </p>
 
         <details>
-          <summary><span class="more">Read Article</span><span class="less">Close</span></summary>
+          <summary><span class="more">Read article</span><span class="less">Close article</span></summary>
           <div class="post-body">
             <p>
               <strong>Google Ads</strong> shows your ad when someone is already searching for what
@@ -345,9 +481,9 @@
               new brands and offers people did not know they wanted.
             </p>
             <ul>
-              <li>✔ Need leads from people searching right now? Start with Google Ads.</li>
-              <li>✔ Selling a visual product or building a brand? Start with Meta Ads.</li>
-              <li>✔ Have the budget? Use both and retarget visitors across them.</li>
+              <li><i class="fas fa-circle-check"></i> <span>Need leads from people searching right now? Start with Google Ads.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span>Selling a visual product or building a brand? Start with Meta Ads.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span>Have the budget? Use both and retarget visitors across them.</span></li>
             </ul>
           </div>
         </details>
@@ -355,25 +491,25 @@
     </article>
 
     <!-- Post 4 -->
-    <article class="post-card">
+    <article class="post t-meta">
       <div class="post-top"><i class="fas fa-triangle-exclamation"></i></div>
       <div class="p-7">
-        <span class="tag">SEO</span>
-        <h2 class="text-xl font-black mb-3 deep-text">6 On-Page SEO Mistakes That Hold Your Website Back</h2>
-        <p class="text-gray-600 mb-5">
+        <span class="tag">On Page SEO</span>
+        <h2 class="text-xl font-extrabold text-[#0b1437] mb-3">6 on-page SEO mistakes that hold your website back</h2>
+        <p class="text-slate-600 mb-5">
           Small mistakes on your pages can keep you off the first page. Most are easy to fix.
         </p>
 
         <details>
-          <summary><span class="more">Read Article</span><span class="less">Close</span></summary>
+          <summary><span class="more">Read article</span><span class="less">Close article</span></summary>
           <div class="post-body">
             <ul>
-              <li>✔ <strong>Missing or duplicate title tags.</strong> Every page needs its own clear title.</li>
-              <li>✔ <strong>No meta description.</strong> It affects how many people click your result.</li>
-              <li>✔ <strong>More than one H1.</strong> Use one main heading per page.</li>
-              <li>✔ <strong>Keyword stuffing.</strong> Write for people first, not for search engines.</li>
-              <li>✔ <strong>Heavy images.</strong> Large images slow the page. Compress them.</li>
-              <li>✔ <strong>No internal links.</strong> Link your related pages to each other.</li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Missing or duplicate title tags.</strong> Every page needs its own clear title.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>No meta description.</strong> It affects how many people click your result.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>More than one H1.</strong> Use one main heading per page.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Keyword stuffing.</strong> Write for people first, not for search engines.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Heavy images.</strong> Large images slow the page. Compress them.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>No internal links.</strong> Link your related pages to each other.</span></li>
             </ul>
             <p>
               Fixing these basics is often the fastest way to improve rankings on an existing site.
@@ -384,26 +520,26 @@
     </article>
 
     <!-- Post 5 -->
-    <article class="post-card">
+    <article class="post t-web">
       <div class="post-top"><i class="fas fa-code"></i></div>
       <div class="p-7">
         <span class="tag">Web Development</span>
-        <h2 class="text-xl font-black mb-3 deep-text">Why A Fast, Mobile-Friendly Website Matters</h2>
-        <p class="text-gray-600 mb-5">
+        <h2 class="text-xl font-extrabold text-[#0b1437] mb-3">Why a fast, mobile-friendly website matters</h2>
+        <p class="text-slate-600 mb-5">
           Most visitors come from a phone. If your site is slow, they leave before it loads.
         </p>
 
         <details>
-          <summary><span class="more">Read Article</span><span class="less">Close</span></summary>
+          <summary><span class="more">Read article</span><span class="less">Close article</span></summary>
           <div class="post-body">
             <p>
               Your website is often the first impression of your business. A slow or broken
               mobile site loses customers and wastes the money you spend on ads and SEO.
             </p>
             <ul>
-              <li>✔ Google uses the mobile version of your site for ranking.</li>
-              <li>✔ Page speed is part of Google's ranking signals.</li>
-              <li>✔ A clear layout and visible contact button bring more enquiries.</li>
+              <li><i class="fas fa-circle-check"></i> <span>Google uses the mobile version of your site for ranking.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span>Page speed is part of Google's ranking signals.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span>A clear layout and visible contact button bring more enquiries.</span></li>
             </ul>
             <p>
               Test your site on your own phone. If it is hard to read, slow to open or hard to
@@ -415,25 +551,25 @@
     </article>
 
     <!-- Post 6 -->
-    <article class="post-card">
+    <article class="post t-content">
       <div class="post-top"><i class="fas fa-pen-nib"></i></div>
       <div class="p-7">
         <span class="tag">Content Writing</span>
-        <h2 class="text-xl font-black mb-3 deep-text">How To Write Content That Ranks On Google</h2>
-        <p class="text-gray-600 mb-5">
+        <h2 class="text-xl font-extrabold text-[#0b1437] mb-3">How to write content that ranks on Google</h2>
+        <p class="text-slate-600 mb-5">
           Good content answers the reader's question better than the pages already ranking.
         </p>
 
         <details>
-          <summary><span class="more">Read Article</span><span class="less">Close</span></summary>
+          <summary><span class="more">Read article</span><span class="less">Close article</span></summary>
           <div class="post-body">
             <ul>
-              <li>✔ <strong>Start with the search intent.</strong> What does the person really want to know?</li>
-              <li>✔ <strong>Pick one main keyword</strong> and use it in the title, first paragraph and a heading.</li>
-              <li>✔ <strong>Use clear headings</strong> so readers can scan the page.</li>
-              <li>✔ <strong>Keep sentences short</strong> and avoid filler.</li>
-              <li>✔ <strong>Add real value:</strong> examples, steps or answers competitors missed.</li>
-              <li>✔ <strong>Update old articles</strong> so they stay accurate.</li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Start with the search intent.</strong> What does the person really want to know?</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Pick one main keyword</strong> and use it in the title, first paragraph and a heading.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Use clear headings</strong> so readers can scan the page.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Keep sentences short</strong> and avoid filler.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Add real value:</strong> examples, steps or answers competitors missed.</span></li>
+              <li><i class="fas fa-circle-check"></i> <span><strong>Update old articles</strong> so they stay accurate.</span></li>
             </ul>
             <p>
               Content written for real readers tends to rank better and convert better
@@ -448,27 +584,24 @@
 </section>
 
 <!-- ================= CTA ================= -->
-<section class="py-20 px-6">
-  <div class="max-w-6xl mx-auto p-10 md:p-14 text-center rounded-[34px]"
-       style="background:linear-gradient(135deg,#fde047,#f5b700);color:#0a1a4a;box-shadow:0 30px 70px rgba(245,183,0,.30);">
+<section class="px-5 pb-20 bg-white">
+  <div class="cta max-w-6xl mx-auto">
 
-    <h2 class="text-4xl md:text-5xl font-black uppercase mb-5">
-      Want Us To Do It For You?
-    </h2>
+    <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Want us to do it for you?</h2>
 
-    <p class="text-lg max-w-3xl mx-auto mb-8 font-semibold">
+    <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-9">
       Reading is a good start. If you want an expert to handle it, send us your website.
     </p>
 
-    <div class="flex justify-center gap-4 flex-wrap">
-      <a href="contact.html"
-         class="bg-[#0a1a4a] text-white px-8 py-4 rounded-full font-black hover:scale-105 transition">
-        Contact Us
+    <div class="flex justify-center gap-3 flex-wrap">
+      <a href="https://wa.me/923709909747" target="_blank" rel="noopener noreferrer" class="btn btn-wa">
+        <i class="fab fa-whatsapp text-lg"></i> Chat on WhatsApp
       </a>
-
-      <a href="services.html"
-         class="bg-white text-[#0a1a4a] px-8 py-4 rounded-full font-black hover:scale-105 transition">
-        View Services
+      <a href="contact.html" class="btn btn-gold">
+        <i class="fas fa-paper-plane"></i> Contact us
+      </a>
+      <a href="services.html" class="btn btn-light">
+        <i class="fas fa-layer-group"></i> View services
       </a>
     </div>
   </div>
@@ -478,56 +611,27 @@
 <div class="floating-contact" id="floatingContact">
 
   <div class="contact-options">
-    <a href="https://wa.me/923709909747" target="_blank" rel="noopener noreferrer" class="float-btn bg-green-500" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp text-2xl"></i>
+    <a href="https://wa.me/923709909747" target="_blank" rel="noopener noreferrer" class="float-btn soc-wa" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
     </a>
-
-    <a href="https://www.instagram.com/iqra_abbasiseo" target="_blank" rel="noopener noreferrer" class="float-btn insta-bg" aria-label="Instagram">
-      <i class="fab fa-instagram text-2xl"></i>
+    <a href="https://www.instagram.com/iqra_abbasiseo" target="_blank" rel="noopener noreferrer" class="float-btn soc-insta" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
     </a>
-
-    <a href="mailto:iqraseo737@gmail.com" class="float-btn bg-blue-600" aria-label="Email">
-      <i class="fas fa-envelope text-2xl"></i>
+    <a href="mailto:iqraseo737@gmail.com" class="float-btn soc-mail" aria-label="Email">
+      <i class="fas fa-envelope"></i>
     </a>
   </div>
 
-  <button
-    type="button"
-    id="floatToggle"
-    aria-label="Open contact options"
-    aria-expanded="false"
-    class="text-[#0a1a4a] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:rotate-12 transition"
-    style="background:#facc15;"
-  >
-    <i class="fas fa-comments text-3xl"></i>
+  <button type="button" id="floatToggle" class="float-toggle" aria-label="Open contact options" aria-expanded="false">
+    <i class="fas fa-comments"></i>
   </button>
 
 </div>
 
-<!-- ================= SIMPLE FOOTER ================= -->
-<footer class="py-10 px-6 text-white" style="background:#061033;border-top:3px solid #facc15;">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-
-    <a href="index.html" class="text-2xl font-black flex items-center">
-      <span class="logo-mark" style="background:linear-gradient(135deg,#fde047,#f5b700);color:#0a1a4a;">IS</span>
-      IQRA<span class="gold-text">SEO</span>
-    </a>
-
-    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-bold uppercase text-blue-100">
-      <a href="index.html" class="hover:text-yellow-300">Home</a>
-      <a href="about.html" class="hover:text-yellow-300">About</a>
-      <a href="services.html" class="hover:text-yellow-300">Services</a>
-      <a href="blog.html" class="hover:text-yellow-300">Blog</a>
-      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-      <a href="privacy-policy.html" class="hover:text-yellow-300">Privacy Policy</a>
-    </div>
-
-  </div>
-
-  <p class="text-center mt-8 pt-6 text-blue-200 text-sm border-t border-yellow-400/10 max-w-7xl mx-auto">
-    © 2026 Iqra SEO. All Rights Reserved.
-  </p>
-</footer>
+<!-- ================= COPYRIGHT ONLY (no footer on inner pages) ================= -->
+<div class="copy-bar">
+  © 2026 Iqra SEO. All rights reserved.
+</div>
 
 <script>
   // Mobile menu
@@ -553,15 +657,15 @@
       const open = floatBox.classList.toggle('open');
       floatToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       floatToggle.innerHTML = open
-        ? '<i class="fas fa-xmark text-3xl"></i>'
-        : '<i class="fas fa-comments text-3xl"></i>';
+        ? '<i class="fas fa-xmark"></i>'
+        : '<i class="fas fa-comments"></i>';
     });
 
     document.addEventListener('click', function (e) {
       if (!floatBox.contains(e.target) && floatBox.classList.contains('open')) {
         floatBox.classList.remove('open');
         floatToggle.setAttribute('aria-expanded', 'false');
-        floatToggle.innerHTML = '<i class="fas fa-comments text-3xl"></i>';
+        floatToggle.innerHTML = '<i class="fas fa-comments"></i>';
       }
     });
   }
